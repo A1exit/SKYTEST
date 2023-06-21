@@ -17,7 +17,7 @@ class ResumeTestCase(APITestCase):
             experience="testexperience",
             portfolio="https://github.com/",
             title="testitle",
-            phone="+79999999999",
+            phone="+79650118110",
             email="testemail@test.com",
             user=self.user,
             status=Status.not_published,
@@ -27,7 +27,7 @@ class ResumeTestCase(APITestCase):
             experience="testexperience2",
             portfolio="https://github.com/",
             title="testitle2",
-            phone="+79999999999",
+            phone="+79650118110",
             email="testemail2@test.com",
             user=self.user,
             status=Status.not_published,
@@ -37,7 +37,7 @@ class ResumeTestCase(APITestCase):
             experience="testexperience3",
             portfolio="https://github.com/",
             title="testitle3",
-            phone="+79999999999",
+            phone="+79650118110",
             email="testemail3@test.com",
             user=self.user,
             status=Status.not_published,
@@ -65,7 +65,7 @@ class ResumeTestCase(APITestCase):
         resume_id = Resume.objects.filter(user=self.user).first().id
         response = self.client.patch(
             f"/resume/{resume_id}/",
-            data={"title": "new_title", "phone": "+88005553535"},
+            data={"title": "new_title", "phone": "+79650118111"},
         )
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
